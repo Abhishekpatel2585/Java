@@ -1,0 +1,27 @@
+//Main class Arithmatic
+class Arithmatic{
+	
+	//main method
+	public static void main(String[] args){
+	
+		// variable declaration 
+		int a=10,b=20,sum;
+		sum=a+b;
+		System.out.println(sum);
+		
+		// variable declaration 
+		int c=10,d=20,sum2;
+		sum2=c-d;
+		System.out.println(sum2);
+		
+		// variable declaration 
+		int e=10,f=20,sum3;
+		sum3=e*f;
+		System.out.println(sum3);
+		
+		// variable declaration 
+		int g=10,h=20,sum4;
+		sum4=g/h;
+		System.out.println(sum4);
+	}
+}

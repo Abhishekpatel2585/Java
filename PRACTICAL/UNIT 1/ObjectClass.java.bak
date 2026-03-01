@@ -1,0 +1,16 @@
+class student{
+	int Roll_No = 55;
+	String Name = "ABHISHEK" ;
+	
+	void Display(){
+		System.out.println("Student's Roll No is : "+Roll_No);
+		System.out.println("Student's Name is : "+Name);
+	}
+}
+
+class ObjectClass{
+	public static void main(String[] args){
+		student s1=new student();
+		s1.display();
+	}
+}

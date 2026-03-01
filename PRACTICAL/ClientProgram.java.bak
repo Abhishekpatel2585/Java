@@ -1,0 +1,23 @@
+import java.io.*;
+import java.net.*;
+
+class ClientProgram{
+	public static void main(String[] args){
+		Socket s=null;
+		DataInputStream Input=null;
+		DataOutputStream Output=null;
+		try{
+			s=new Socket("localhost",25);
+			Input=new DataInputStream(System.in);
+			Output=new DataOutputStream(s.getOutputStream());
+			String msg="";
+			while(!equalsIgnoreCase("Bye")){
+				msg=Input.readLine();
+				Output.writeUTF(msg);
+			}
+			
+		}catch(Exception e){
+			System.out.println(e.toString());
+		}
+	}
+}

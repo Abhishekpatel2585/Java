@@ -1,0 +1,17 @@
+public class Fibonacci{
+	public static void main(String[] args){
+		int Current=0;
+		int Previous=0;
+		int n=7;
+		int Sum=0;
+		for(int i=0;i<=n;i++){
+			Sum=Previous+Current;
+			System.out.print(Previous+" ");
+			Previous=Current;
+			Current=Sum;
+			if(Current==0){
+				Current=1;
+			}
+		}
+	}
+}

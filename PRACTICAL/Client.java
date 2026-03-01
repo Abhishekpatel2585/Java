@@ -1,0 +1,25 @@
+import java.io.*;
+import java.net.*;
+
+class Client{
+	public static void main(String[] args){
+		Socket s=null;
+		DataInputStream Input=null;
+		DataOutputStream Output=null;
+		try{
+			s=new Socket("localhost",1025);
+			System.out.println("SERVER CONNECTED...");
+			Input=new DataInputStream(System.in);
+			Output=new DataOutputStream(s.getOutputStream());
+			String msg="";
+			while(!msg.equals("Bye")){
+				msg=Input.readLine();
+				Output.writeUTF(msg);
+			}
+		}catch(IOException e){
+			System.out.println(e.toString());
+		}
+	}
+}
+
+//PRIME 

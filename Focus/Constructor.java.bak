@@ -1,0 +1,13 @@
+class Car{
+	int number_plate=2024;
+	String name="TATA";
+	Car(){
+		System.out.println("Name of the car is : "+name+" Number plate of car is :"+number_plate);
+	}
+}
+class Constructor{
+	public static void main(String[] args){
+		//WHEN OBJECT CREATE CONSTRUCTOR CALL AUTOMATICALLY
+		Car Object1=new Car();
+	}
+}

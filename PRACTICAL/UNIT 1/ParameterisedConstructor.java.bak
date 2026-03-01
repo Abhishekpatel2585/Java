@@ -1,0 +1,15 @@
+class Keyboard{
+	Keyboard(int a,String b){
+		int key=a;
+		String Company=b;
+		System.out.println("KEY COUNT IS :"+ key);
+		System.out.println("COMPANY NAME IS : " + Company);
+	}
+}
+
+class ParameterisedConstructor{
+	public static void main(String[] args){
+		Keyboard k1=new Keyboard(32,"Redgear");
+		System.out.println("Constructor call automatically When object is created , \n I didn't create Call it");
+	}
+}

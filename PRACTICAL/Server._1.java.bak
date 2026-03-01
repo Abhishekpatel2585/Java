@@ -1,0 +1,24 @@
+import java.net.*;
+import java.io.*;
+
+Public class SerVer{
+	public static void main(String[] args){
+		ServerSocket ss=null;
+		DataInputStream Input=null;
+		DataOutputStrea Output=null;
+		try{
+			ss=new ServerSocket(15);
+			System.out.println("SERVER STARTED");
+			ss=s.accept();
+			Input=new DataInputStream(s.getInputStream());
+			String msg="";
+			while(!msg.equals("Bye")){
+				msg=Input.readUTF();
+				System.out.println(Num);
+			}
+		}catch(Exception e){
+			System.out.println(e.toString());
+		}
+	}
+}
+}

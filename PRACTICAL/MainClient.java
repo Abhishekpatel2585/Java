@@ -1,0 +1,24 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.Socket;
+
+class MainClient{
+	public static void main(String[] args){
+		Socket s=null;
+		DataInputStream Input=null;
+		DataOutputStream Output=null;
+		try{
+			s=new Socket("localhost",500);
+			System.out.println("Server Connected....");
+			Input=new DataInputStream(System.in);
+			Output=new DataOutputStream(s.getOutputStream());
+			String msg="";
+			while(!msg.equals("Bye")){
+				msg=Input.readLine();
+				Output.writeUTF(msg);
+			}
+		}catch(Exception e){
+			System.out.println(e.toString());
+		}
+	}
+}

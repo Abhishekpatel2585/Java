@@ -1,0 +1,53 @@
+import java.net.*;
+import java.io.*;
+
+class ServerDemo{
+		
+		public static void main(String[] args){
+			ServerSocket ss=null;
+			Socket s=null;
+			DataInputStream Input=null;
+			try{
+				ss=new ServerSocket(25);
+				System.out.println("Server Started...");
+				s=ss.accept();
+				System.out.println("Client Connected..");
+				Input=new DataInputStream(s.getInputStream());
+				String msg="";
+				while(!msg.equals("Bye")){
+					msg=Input.readUTF();
+					System.out.println(msg);
+					try{
+						int number=Integer.parseInt(msg);
+						boolean IsPrime=true;
+						if(number<=1){
+							IsPrime=false;
+						}else{
+							for(int i=2;i<number;i++){
+								if(number%i==0){
+									IsPrime=false;
+									break;
+								}
+								else{
+									IsPrime=true;
+								}
+							}
+						}
+						if(IsPrime){
+							System.out.println("Prime");
+						}else{
+							System.out.println("Not Prime");
+						}
+					}catch(NumberFormatException e){
+						System.out.println("!!ENTER NUMBER!!");
+					}
+					
+				}
+				System.out.println("Client Disconnected...");
+				
+			}catch(Exception e){
+				System.out.println(e.toString());
+			}
+		}
+	
+}

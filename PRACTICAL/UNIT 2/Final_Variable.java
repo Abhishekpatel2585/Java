@@ -1,0 +1,13 @@
+class Final_Variable
+{
+	final int speedlimit=100; //finalvariable so assign value can't change 
+	void run()
+	{
+		System.out.println("Speed is Fix : " + speedlimit);
+	}
+	public static void main(String[] args)
+	{
+		Final_Variable BMW=new Final_Variable();
+		BMW.run();
+	}
+}

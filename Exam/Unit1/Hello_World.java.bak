@@ -1,0 +1,10 @@
+//Main class Hello_World
+class Hello_World{
+
+	//main method
+	public static void main(String[] args){
+	
+		// System is a package OUT is a class of printstream class PRINTLN is a method of printstream
+		System.out.println("Hello_World");
+	}
+}
